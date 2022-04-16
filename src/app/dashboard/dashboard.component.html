@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="sidebar">
+    <div class="logo">
+      <span>School</span>
+    </div>
+    <div class="menu">
+      <ul>
+        <li class="menu-item" routerLinkActive="active">
+          <div routerLink="/dashboard" routerLinkActive="active-tab">
+            <i class="pi pi-chart-bar"></i>
+            <p>Dashboard</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="profile">
+      <p-avatar label="P" size="medium"></p-avatar>
+      {{ 'Principal' }}
+    </div>
+  </div>
+  <div class="main relative">
+    <p-toolbar>
+      <div class="p-toolbar-group-left">
+        <i class="pi pi-bars mr-2" id="toggle-sidebar"></i>
+        <p>{{title | uppercase}}</p>
+      </div>
+    </p-toolbar>
+    <app-loader [displayLoader]="loaderService.displayLoader"></app-loader>
+    <router-outlet (activate)="setHeader()"></router-outlet>
+  </div>
+</div>

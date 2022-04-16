@@ -1,0 +1,257 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --primary-color: #265192 !important;
+  --secondary-color: #84c4e2 !important;
+  --white-color: #ffffff !important;
+  --chatFontSize: 16px
+}
+
+body {
+  background: #efefef;
+  font-family: 'PT Sans', sans-serif;
+}
+
+*:focus {
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+.secondary-color {
+  color: var(--secondary-color);
+}
+
+// OVERRIDE TOOLBAR
+.p-toolbar {
+  border: none !important;
+  border-radius: unset !important;
+}
+
+.p-toolbar p {
+  margin: 0;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+// OVERRIDE BUTTON CSS
+.p-button {
+  background: var(--primary-color) !important;
+  border: none !important;
+}
+
+.p-button:hover {
+  background: var(--secondary-color) !important;
+}
+
+.p-button-outlined {
+  background: unset !important;
+  border: 1px solid var(--secondary-color) !important;
+  color: var(--secondary-color) !important;
+}
+
+.p-button-outlined:hover {
+  color: var(--white-color) !important;
+}
+
+// OVERRIDE TABLE CSS
+.p-datatable .p-datatable-thead > tr > th {
+  background: none !important;
+  border: none !important;
+}
+
+.p-datatable .p-datatable-tbody > tr > td {
+  border: none !important;
+}
+
+.p-datatable .p-datatable-tbody > tr > td:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.p-datatable .p-datatable-tbody > tr > td:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.p-datatable table {
+  border-collapse: separate !important;
+  border-spacing: 0 5px;
+}
+
+.p-datatable .p-datatable-header {
+  border: none !important;
+  padding: 0 !important;
+  background: none !important;
+}
+
+.p-input-icon-left {
+  width: 50%;
+}
+
+.p-input-icon-left input {
+  width: 100%;
+  border: none;
+}
+
+// PAGINATION
+.p-paginator {
+  background: none !important;
+  border: none !important;
+  justify-content: flex-end !important;
+  padding: 0.75rem 0 0.75rem 0.75rem !important;
+  color: var(--primary-color) !important;
+}
+
+.p-paginator-next, .p-paginator-page, .p-paginator-first, .p-paginator-last, .p-paginator-prev {
+  color: var(--primary-color) !important;
+  border: none !important;
+  margin: 5px !important;
+  border-radius: 5px !important;
+}
+
+.p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+  background: var(--primary-color) !important;
+  border: none !important;
+  color: var(--white-color) !important;
+}
+
+
+// BADGE
+.badge {
+  border-radius: 5px;
+  padding: 0.25em 0.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: .3px;
+}
+
+.badge-Draft {
+  background-color: #efefef;
+  color: #808080;
+}
+
+.badge-Ongoing {
+  background-color: #ffd8b2;
+  color: #805b36;
+}
+
+.badge-Completed {
+  background-color: #c8e6c9;
+  color: #256029;
+}
+
+.badge-Failed {
+  background-color: #ffcdd2;
+  color: #c63737;
+}
+
+.badge-Scheduled {
+  background-color: #b3e5fc;
+  color: #23547b;
+}
+
+// CARD
+.p-card {
+  box-shadow: none !important;
+}
+
+.p-card-content {
+  padding: 0 !important;
+}
+
+// Form
+.ng-invalid.ng-touched:not(form) {
+  border: 1px solid red;
+}
+
+// UTILs
+.w-100 {
+  width: 100%;
+}
+
+//atWHO
+.atwho-view {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  margin-top: 18px;
+  background: white;
+  color: black;
+  border: 1px solid #DDD;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  min-width: 120px;
+  z-index: 11110 !important;
+}
+
+.atwho-view .atwho-header {
+  padding: 5px;
+  margin: 5px;
+  cursor: pointer;
+  border-bottom: solid 1px #eaeff1;
+  color: #6f8092;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.atwho-view .atwho-header .small {
+  color: #6f8092;
+  float: right;
+  padding-top: 2px;
+  margin-right: -5px;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.atwho-view .atwho-header:hover {
+  cursor: default;
+}
+
+.atwho-view .cur {
+  background: var(--secondary-color);
+  color: white;
+}
+
+.atwho-view .cur small {
+  color: white;
+}
+
+.atwho-view strong {
+  color: var(--secondary-color);
+}
+
+.atwho-view .cur strong {
+  color: white;
+  font: bold;
+}
+
+.atwho-view ul {
+  /* width: 100px; */
+  list-style: none;
+  padding: 0;
+  margin: auto;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.atwho-view ul li {
+  display: block;
+  padding: 5px 10px;
+  border-bottom: 1px solid #DDD;
+  cursor: pointer;
+  /* border-top: 1px solid #C8C8C8; */
+}
+
+.atwho-view small {
+  font-size: smaller;
+  color: #777;
+  font-weight: normal;
+}
+.p-tabview .p-tabview-panels {
+  background: unset !important;
+}
+.p-calendar .p-datepicker {
+  width: 300px;
+  transform-origin: left;
+}

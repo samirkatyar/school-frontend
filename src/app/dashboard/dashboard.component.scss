@@ -1,0 +1,197 @@
+.sidebar {
+  background: var(--primary-color);
+  width: 250px;
+  overflow: hidden;
+  position: relative;
+  min-height: 100vh;
+  max-height: 100vh;
+  transition: all .5s;
+  float: left;
+}
+
+.logo {
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  align-items: center;
+  span {
+    position: relative;
+    i {
+      position: absolute;
+      top: -10px;
+      font-weight: 900;
+      font-size: 1.4rem;
+      right: -20px;
+    }
+  }
+}
+
+.menu {
+  width: 100%;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  margin-top: 10px;
+}
+
+.menu > ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.menu > ul li {
+  width: 100%;
+  text-align: center;
+}
+
+.menu > ul li div {
+  align-items: center;
+  font-size: 17px;
+  color: var(--white-color);
+  display: flex;
+  height: 100%;
+  margin: 10px;
+  padding: 10px;
+  font-weight: 500;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.menu > ul li div:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.menu-item {
+  height: fit-content;
+  border: none;
+  outline: none;
+}
+
+.menu-item > ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px 0px 0px 20px;
+}
+
+.menu-item > div > p {
+  margin: 0px;
+}
+
+.menu-item > div > i {
+  margin: 0 10px 0 0;
+}
+
+.menu-item > ul li div {
+  font-size: 17px;
+  color: var(--white-color);
+  display: flex;
+  height: 100%;
+  margin: 10px;
+  padding: 10px;
+  font-weight: 500;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.menu-item:hover .sub-tabs {
+  display: block;
+}
+
+.sub-menu {
+  display: none;
+}
+
+.menu-item-active .active-tab {
+  color: var(--blue-300) !important;
+  border-radius: 5px;
+  background-color: var(--white-color) !important;
+}
+
+.menu-item:hover .sub-menu {
+  display: block;
+}
+
+.menu-item-active .sub-menu {
+  display: block;
+}
+
+.sub-menu > li > div > p {
+  margin: 0px;
+}
+
+.sub-menu > li > div > i {
+  margin: 0 10px 0 0;
+}
+
+.profile {
+  align-items: center;
+  font-size: 17px;
+  color: var(--white-color);
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  margin: 20px 10px;
+  padding: 10px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.profile p-avatar {
+  align-items: center;
+  display: flex;
+}
+
+::ng-deep .p-avatar {
+  margin-right: 10px;
+}
+
+::ng-deep .p-avatar img {
+  border-radius: 5px;
+}
+
+.main {
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.active .active-tab {
+  color: var(--white-color) !important;
+  border-radius: 5px;
+  background-color: var(--secondary-color) !important;
+}
+
+.sidebar__li:hover .sub-tabs {
+  display: block;
+}
+
+.active .sub-tabs {
+  display: block;
+}
+
+.active .active-tab-sub {
+  color: var(--white-color) !important;
+  background-color: var(--secondary-color) !important;
+}
+
+.active-tab-sub:hover {
+  opacity: 1;
+  color: var(--white-color) !important;
+  background-color: var(--secondary-color) !important;
+}
+
+::ng-deep .p-toolbar {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+}
